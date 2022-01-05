@@ -15,6 +15,7 @@
     --sec-bg: #2a2a2a;
 }
 body {
+    height: 10000px;
     background-color: #101010;
     font-size: 18px;
     font-weight: 500;
@@ -297,3 +298,34 @@ img {
     margin-bottom: 20px;
 }
 /* end about me section */
+/* start our services */
+.our-services {
+    padding: 5rem 0;
+}
+.our-services h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 30px;
+}
+.service .card {
+    background-color: var(--sec-bg);
+    padding: 1.5rem 1.25rem;
+    border-radius: .25rem;
+    text-align: center;
+}
+.service-icon {
+    font-size: 3rem;
+    color: var(--primary-clr);
+}
+.service-name {
+    font-size: 1.5rem;
+    margin: 20px 0 15px;
+}
+.service .card > .btn {
+    margin: 20px auto 0;
+}
+/* end our services */
