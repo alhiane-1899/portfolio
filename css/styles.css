@@ -15,7 +15,6 @@
     --sec-bg: #2a2a2a;
 }
 body {
-    height: 10000px;
     background-color: #101010;
     font-size: 18px;
     font-weight: 500;
@@ -31,8 +30,6 @@ p {
     line-height: 1.7;
     color: var(--text-clr);
     width: 100%;
-    max-width: 40rem;
-    margin: 0 auto;
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
@@ -336,6 +333,7 @@ img {
 }
 .contact-us h3 {
     text-align: center;
+    line-height: 1.5;
     font-size: 1.5rem;
     letter-spacing: 1px;
     margin-bottom: 1.5rem;
@@ -344,3 +342,52 @@ img {
     margin: 0 auto;
 }
 /* end contact us section */
+/* start footer */
+.footer-container {
+    padding: 5rem 0;
+    text-align: center;
+}
+.footer-container h2 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+.footer-container p {
+    width: 100%;
+    max-width: 30rem;
+    margin: 15px auto;
+    font-size: .95rem;
+    color: var(--white-clr);
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+.social-media li {
+    margin: 0 15px;
+}
+.social-media li a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-clr);
+    border-radius: 50%;
+    border: 2px solid transparent;
+    font-size: 1.25rem;
+    color: var(--white-clr);
+}
+.social-media li a:hover {
+    background-color: transparent;
+    border-color: var(--primary-clr);
+}
+.credit {
+    padding-bottom: 2rem;
+}
+.credit p {
+    text-align: center;
+    font-size: .85rem;
+    letter-spacing: 1px;
+    color: var(--primary-clr);
+}
+/* end footer */
