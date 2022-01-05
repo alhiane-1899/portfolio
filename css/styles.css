@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
 /* start basic rules */
+html {
+    -webkit-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    -webkit-scroll-padding-top: 4.5rem;
+    scroll-padding-top: 4.5rem;
+}
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +13,10 @@
     outline: none;
     transition: all .2s ease-in-out;
     font-family: 'Josefin Sans', sans-serif;
+}
+::selection {
+    background-color: var(--primary-clr);
+    color: var(--white-clr);
 }
 :root {
     --primary-clr: #F90E4D;
