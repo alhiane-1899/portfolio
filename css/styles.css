@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+/* start basic rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: all .2s ease-in-out;
+}
+:root {
+    --primary-clr: #F90E4D;
+    --white-clr: #ffffff;
+    --text-clr: #fcfc;
+}
+body {
+    background-color: #101010;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+}
+/* end basic rules */
