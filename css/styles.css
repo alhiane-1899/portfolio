@@ -11,6 +11,7 @@
     --primary-clr: #F90E4D;
     --white-clr: #ffffff;
     --text-clr: #fcfc;
+    --sec-bg: #191919;
 }
 body {
     background-color: #101010;
@@ -85,3 +86,106 @@ h1, h2, h3, h4, h5, h6 {
     background-color: transparent;
 }
 /* end basic rules */
+/* start header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    padding: 1.2rem 0;
+    background-color: var(--sec-bg);
+    box-shadow: 0 5px 15px rgba(25, 25, 25, .2);
+}
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.brand {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--white-clr);
+}
+.brand span {
+    color: var(--primary-clr);
+}
+#nav-input {
+    display: none;
+}
+.nav-btn {
+    position: relative;
+    display: block;
+    width: 46px;
+    height: 37px;
+    border: 1px solid var(--white-clr);
+    border-radius: .25rem;
+    cursor: pointer;
+}
+@media screen and (min-width: 992px) {
+    .nav-btn {
+        display: none;
+    }
+}
+.nav-btn::after {
+    content: "\f0c9";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--white-clr);
+}
+#nav-input:checked + .nav-btn::after {
+    content: "\f00d";
+}
+.nav-links {
+    display: flex;
+}
+@media screen and (max-width: 992px) {
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        background-color: var(--sec-bg);
+        border-top: 1px solid transparent;
+        box-shadow: 0 5px 15px rgba(255, 255, 255, .2);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    #nav-input:checked ~ .nav-links {
+        border-color: var(--white-clr);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+.nav-links li a {
+    display: block;
+    padding: 0 15px;
+    color: var(--white-clr);
+}
+@media screen and (max-width: 992px) {
+    .nav-links li a {
+        padding: 15px 15px;
+        background-color: #101010;
+        border-radius: .25rem;
+    }
+    .nav-links li:not(:last-child) a {
+        margin-bottom: 15px;
+    }
+}
+.nav-links li a:hover {
+    color: var(--primary-clr);
+}
+@media screen and (max-width: 992px) {
+    .header .btn {
+        display: none;
+    }
+}
+/* end header */
